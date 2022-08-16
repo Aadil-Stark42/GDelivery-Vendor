@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.vdeliverzvendor">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="in.vdeliverzvendor.utils.Application"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+
+        android:icon="@drawable/ic_logo"
+        android:roundIcon="@drawable/ic_logo"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/apptheme">
+        <activity android:name="in.vdeliverzvendor.resetpasswordwithotp.ResetPasswordwithOTPActivity"/>
+        <activity android:name="in.vdeliverzvendor.signup.SignupActivity"/>
+
+        <activity android:name="in.vdeliverzvendor.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name="in.vdeliverzvendor.dashboard.BarGraphDisplayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="in.vdeliverzvendor.shoplist.OutletListWithSearchActivity"/>
+        <activity android:name="in.vdeliverzvendor.shopoverview.OutletOverviewActivity"/>
+        <activity android:name="in.vdeliverzvendor.productview.ProductviewActivity"/>
+        <activity android:name="in.vdeliverzvendor.productlist.ProductListWithSearchActivity"/>
+        <activity android:name="in.vdeliverzvendor.productview.ProductStatusActivity"/>
+        <activity android:name="in.vdeliverzvendor.outletstatus.OutLetStatusUpdateActivity"/>
+        <activity android:name="in.vdeliverzvendor.editoutlet.OutletEditActivity"/>
+        <activity android:name="in.vdeliverzvendor.slotlist.SlotListActivity"/>
+        <activity android:name="in.vdeliverzvendor.slot.SlotWeekdaysUpdateActivity"/>
+        <activity android:name="in.vdeliverzvendor.slot.SlotEditActivity"/>
+        <activity android:name="in.vdeliverzvendor.myearnings.MyEarningsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name="in.vdeliverzvendor.topping.CreatetoppingCatActivity"/>
+        <activity android:name="in.vdeliverzvendor.topping.ToppingListActivity"/>
+        <activity android:name="in.vdeliverzvendor.getoptforemail.GetOtpforEmailActivity"/>
+        <activity android:name="in.vdeliverzvendor.otp_Verification.OTPMobilenumVerificationActivity"/>
+        <activity android:name="in.vdeliverzvendor.getotoformobilenum.GetOtoforMobileNumActivity"/>
+        <activity android:name="in.vdeliverzvendor.notification.NotificationListActivity"/>
+        <activity android:name="in.vdeliverzvendor.editprofile.EditProfileActivity"/>
+        <activity android:name="in.vdeliverzvendor.settings.SettingsActivity"/>
+        <activity android:name="in.vdeliverzvendor.orders.OrderOverviewActivity"/>
+        <activity android:name="in.vdeliverzvendor.orders.OrdersListActivity"/>
+        <activity android:name="in.vdeliverzvendor.dashboard.DashboardActivity"/>
+        <activity android:name="in.vdeliverzvendor.addtoppings.AddToppingsActivity"/>
+        <activity android:name="in.vdeliverzvendor.addvariants.AddvariantsActivity"/>
+        <activity android:name="in.vdeliverzvendor.addnewproduct.AddNewProductDetails"/>
+        <activity android:name="in.vdeliverzvendor.login.LoginActivity"/>
+        <activity android:name="in.vdeliverzvendor.reenterpassword.ResetPwdwithNewActivity" />
+        <activity android:name="in.vdeliverzvendor.updateproduct.UpdateProductActivity"/>
+        <activity android:name="in.vdeliverzvendor.updatetstock.UpdateStockDetailActivity"/>
+        <activity android:name="in.vdeliverzvendor.updatetopping.UpdateToppingActivity"/>
+        <activity android:name="in.vdeliverzvendor.selectyourbusiness.SelectYourBusinessActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name="in.vdeliverzvendor.otp_Verification.OTPEmailVerificationActivity"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name="in.vdeliverzvendor.createoutlet.OutletActivity"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name="in.vdeliverzvendor.resetpassword.ResetPasswordActivity"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name="in.vdeliverzvendor.bankdetail.SuccessActivity"/>
+        <activity android:name="in.vdeliverzvendor.bankdetail.BankDetailActivity"/>
+        <activity android:name="in.vdeliverzvendor.bankdetail.AccountSelectionActivity"/>
+        <activity android:name="in.vdeliverzvendor.addnewproductwithstock.AddToppingWithStockActivity"/>
+        <activity android:name="in.vdeliverzvendor.addnewproductwithstock.AddVariantWIthStockActivity"/>
+        <activity android:name="in.vdeliverzvendor.addnewproductwithstock.NewProductwithStockActivity"/>
+        <activity android:name="in.vdeliverzvendor.slot.CreateSlotActivity"/>
+        <activity android:name="in.vdeliverzvendor.productcategory.ProductCatListActivity"/>
+        <activity android:name="in.vdeliverzvendor.productcategory.CreateProductCategoryActivity"/>
+        <activity android:name="in.vdeliverzvendor.termsandcondition.TermsAndConditionActivity"/>
+        <activity android:name="in.vdeliverzvendor.privacypolicy.PrivacyPolicyActivity"/>
+
+        <service
+            android:name="in.vdeliverzvendor.pushnotification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

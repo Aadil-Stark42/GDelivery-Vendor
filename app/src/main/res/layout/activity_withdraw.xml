@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_left"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdraw"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_availablebalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="available balance"
+            android:fontFamily="@font/segoeui"
+            android:textSize="14sp"
+            android:textColor="#7F8AA5"
+            app:layout_constraintTop_toBottomOf="@id/cons_top"
+            android:layout_marginTop="40dp"
+            android:textAllCaps="true"/>
+
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availablebalance"
+            android:text="5600"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"/>
+        
+        
+        <EditText
+            android:id="@+id/ed_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tv_amount"
+            android:hint="0.00"
+            android:padding="10dp"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_view_bg"/>
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/ed_amount"
+            app:layout_constraintTop_toBottomOf="@id/ed_amount"
+            android:text="*withdrawal limit is 5"
+            android:textColor="#FF5B5B"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+
+        <TextView
+            android:id="@+id/tv_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/login_view_bg"
+            android:backgroundTint="@color/app_theme_color"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:padding="15dp"
+            android:text="Withdaw"
+            android:gravity="center"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

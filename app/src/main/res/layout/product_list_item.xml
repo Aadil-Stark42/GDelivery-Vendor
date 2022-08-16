@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cons_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_img"
+        android:layout_width="40dp"
+        android:scaleType="centerCrop"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="17dp"
+        app:shapeAppearanceOverlay="@style/roundImagView"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/ic_dummyimg"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/tv_productname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Vanilla macaroons"
+        android:textColor="@color/gray2"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"
+        android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_productname"
+            android:text="Active"
+            android:textColor="#4AB543"
+            android:fontFamily="@font/segoeui"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"></TextView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consimg"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="22dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

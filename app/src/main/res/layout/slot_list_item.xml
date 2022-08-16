@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/consitem"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_shopimg"
+        android:layout_width="40dp"
+        android:scaleType="centerCrop"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        app:shapeAppearanceOverlay="@style/roundImagView"
+        android:src="@drawable/ic_dummyimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_shopname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/iv_shopimg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Halcyon Hotel"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:textColor="@color/gray2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+
+    
+    <ImageView
+        android:id="@+id/iv_cal"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_shopimg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shopname"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_calendar"/>
+
+        <TextView
+            android:id="@+id/tv_days"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/iv_cal"
+            app:layout_constraintTop_toTopOf="@id/iv_cal"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_cal"
+            android:layout_marginLeft="10dp"
+            android:textColor="#7F8AA5"
+            android:fontFamily="@font/segoeui"
+            android:textSize="14sp"
+            android:layout_marginRight="25dp"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_clock"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_shopimg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_days"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_clock"/>
+
+    <TextView
+        android:id="@+id/tv_timing"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/iv_cal"
+        app:layout_constraintTop_toTopOf="@+id/iv_clock"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_clock"
+        android:layout_marginLeft="10dp"
+        android:textColor="#7F8AA5"
+        android:fontFamily="@font/segoeui"
+        android:textSize="14sp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4AB543"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_cal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timing"
+        android:layout_marginLeft="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status"
+        android:background="#B7CCC9"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"></View>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

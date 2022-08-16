@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_arrow_left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Slot"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_availabledays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons_top"
+        android:text="Shop Available days"
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/gray2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_weekdays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_availabledays">
+
+        <TextView
+            android:id="@+id/tv_sun"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="S"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_mon"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_sun"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="M"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_tue"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_mon"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="T"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_wed"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_tue"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="W"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_th"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_wed"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="T"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_friday"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_th"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="F"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/tv_sat"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.13"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_friday"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="S"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:padding="5dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_openingtimehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons_weekdays"
+        android:text="opening time"
+        android:textColor="@color/gray2"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_opentime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_openingtimehint"
+        android:background="@drawable/login_view_bg"
+        android:text="12:00 AM"
+        android:textColor="#7F8AA5"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"
+        android:padding="13dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/ic_clock"/>
+
+
+    <TextView
+        android:id="@+id/tv_closingtimehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cons_weekdays"
+        android:text="closing time"
+        android:textColor="@color/gray2"
+        app:layout_constraintStart_toStartOf="@+id/tv_closingtime"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_closingtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.43"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_openingtimehint"
+        android:background="@drawable/login_view_bg"
+        android:text="12:00 AM"
+        android:textColor="#7F8AA5"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"
+        android:padding="13dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/ic_clock"/>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:padding="13dp"
+        android:background="@drawable/login_view_bg"
+        android:backgroundTint="@color/app_theme_color"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:fontFamily="@font/segoe_ui_semibold"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

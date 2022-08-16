@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/tv_availablecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:text="Product Category Name"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availablecount"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:hint="Enter name"
+            android:inputType="textCapSentences"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Save"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="15sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/login_view_bg"
+            android:backgroundTint="@color/app_theme_color"
+            android:padding="13dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

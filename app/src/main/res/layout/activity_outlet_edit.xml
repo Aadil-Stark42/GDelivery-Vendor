@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="35dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv_titile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text="Strawberry sauce"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_uploadimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Upload Outlets Image"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_top" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_cam"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_cam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_uploadimage"
+            app:shapeAppearanceOverlay="@style/roundImagView" />
+
+        <TextView
+            android:id="@+id/tv_bannerimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="Upload Banner Image"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cam" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conbanner"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bannerimg">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_bannercam"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_cam"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundImagView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Shop NamE"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conbanner" />
+
+        <EditText
+            android:id="@+id/ed_shopname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:editable="false"
+            android:fontFamily="@font/segoeui"
+            android:hint="Enter shop name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="#7F8AA5"
+            android:textColorHint="#7F8AA5"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shopname" />
+
+
+        <TextView
+            android:id="@+id/tv_minimumorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Minimum ORDER AMOUNT"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_shopname" />
+
+        <EditText
+            android:id="@+id/ed_minimumorderamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:fontFamily="@font/segoeui"
+            android:hint="Enter minimum order amount"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="#7F8AA5"
+            android:textColorHint="#7F8AA5"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_minimumorder" />
+
+
+        <TextView
+            android:id="@+id/tv_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Enter radius(KM)"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_minimumorderamount" />
+
+        <EditText
+            android:id="@+id/ed_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:fontFamily="@font/segoeui"
+            android:hint="Enter radius"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textColor="#7F8AA5"
+            android:textColorHint="#7F8AA5"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_radius" />
+
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Enter Description"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_radius" />
+
+        <EditText
+            android:id="@+id/ed_desc"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:fontFamily="@font/segoeui"
+            android:hint="Description"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:maxLines="3"
+            android:padding="15dp"
+            android:textColor="#7F8AA5"
+            android:textColorHint="#7F8AA5"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+
+        <TextView
+            android:id="@+id/tv_assigntype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="DELIVERY TYPE"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_desc" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_assigntype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_assigntype">
+
+            <Spinner
+                android:id="@+id/spinnerassign"
+                style="@style/mySpinnerItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_opentime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="opening time"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_assigntype" />
+
+
+        <TextView
+            android:id="@+id/tv_opentime_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_view_bg"
+            android:drawableEnd="@drawable/ic_clock"
+            android:fontFamily="@font/poppins_regular"
+            android:padding="13dp"
+            android:text="00:00"
+            android:textAllCaps="true"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_opentime"
+            app:layout_constraintWidth_percent="0.43" />
+
+
+        <TextView
+            android:id="@+id/tv_closetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="closing time"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_endtimevalue"
+            app:layout_constraintTop_toBottomOf="@+id/cons_assigntype" />
+
+
+        <TextView
+            android:id="@+id/tv_endtimevalue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:drawableEnd="@drawable/ic_clock"
+            android:fontFamily="@font/poppins_regular"
+            android:padding="13dp"
+            android:text="00:00"
+            android:textAllCaps="true"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_closetime"
+            app:layout_constraintWidth_percent="0.43" />
+
+        <TextView
+            android:id="@+id/tv_availabledays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Shop Available days"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_endtimevalue" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_weekdays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availabledays">
+
+            <TextView
+                android:id="@+id/tv_sund"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="S"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tv_mon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="M"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_sund"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tv_tue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="T"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_mon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tv_wed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="W"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_tue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tv_th"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="T"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_wed"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tv_friday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="F"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_th"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+
+            <TextView
+                android:id="@+id/tv_sat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/circle_bg"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="S"
+                android:textColor="@color/gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_friday"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.13" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/login_view_bg"
+            android:backgroundTint="@color/app_theme_color"
+            android:fontFamily="@font/segoe_bold"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_weekdays" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

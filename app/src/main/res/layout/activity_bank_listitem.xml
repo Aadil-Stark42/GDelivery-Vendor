@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_bankimg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/image"/>
+
+    <TextView
+        android:id="@+id/tv_bankname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Federal Bank- 8845"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"
+        android:textColor="@color/gray2"
+        app:layout_constraintStart_toEndOf="@+id/iv_bankimg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_holdername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Holder Name"
+        android:fontFamily="@font/segoeui"
+        android:textSize="14sp"
+        android:textColor="#7F8AA5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bankname"
+        app:layout_constraintStart_toEndOf="@+id/iv_bankimg"
+        android:layout_marginLeft="15dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conscheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bankname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_bankname">
+        <CheckBox
+            android:id="@+id/checkboxnonveg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="15dp"
+            android:text="Veg"
+            android:textColor="#7F8AA5"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:button="@drawable/checkbox_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </CheckBox>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_holdername"
+        android:background="#B7CCC9"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

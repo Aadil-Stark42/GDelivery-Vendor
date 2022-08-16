@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_left"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Coupon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_couponhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_top"
+            android:text="Coupon Code"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:id="@+id/ed_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_couponhint"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:padding="13dp"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:hint="Enter Coupon Code"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_code"
+            android:text="Description"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:id="@+id/ed_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:padding="13dp"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:hint="Enter Coupon Description"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_coupontype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_desc"
+            android:text="Coupon Type"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_coupontype">
+
+            <Spinner
+                android:id="@+id/spinneproductcat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_couponvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_spinner"
+            android:text="coupon Value"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:id="@+id/ed_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_couponvalue"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:padding="13dp"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:hint="Enter Coupon Value"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_validation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_coupon"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:text="coupon valid between"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_startdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_validation"
+            android:text="Start Date"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"/>
+
+        <EditText
+            android:id="@+id/ed_startdate"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.43"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_startdate"
+            android:background="@drawable/login_view_bg"
+            android:padding="13sp"
+
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:textColor="#7F8AA5"/>
+
+
+        <TextView
+            android:id="@+id/tv_enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/ed_enddate"
+            app:layout_constraintTop_toBottomOf="@id/tv_validation"
+            android:text="Start Date"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"/>
+
+        <EditText
+            android:id="@+id/ed_enddate"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.43"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_startdate"
+            android:background="@drawable/login_view_bg"
+            android:padding="13sp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_calendar"
+            android:textColor="#7F8AA5"/>
+
+
+        <TextView
+            android:id="@+id/tv_purchaseamount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_startdate"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:text="purchase amount"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_purchaseamount"
+            android:text="minimum"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"/>
+
+        <EditText
+            android:id="@+id/ed_min"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.43"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_min"
+            android:background="@drawable/login_view_bg"
+            android:padding="13sp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:textColor="#7F8AA5"/>
+
+
+        <TextView
+            android:id="@+id/tv_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/ed_max"
+            app:layout_constraintTop_toBottomOf="@id/tv_purchaseamount"
+            android:text="maximum"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"/>
+
+        <EditText
+            android:id="@+id/ed_max"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.43"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_max"
+            android:background="@drawable/login_view_bg"
+            android:padding="13sp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:textColor="#7F8AA5"/>
+
+        <TextView
+            android:id="@+id/tv_availableoutlet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_max"
+            android:text="available outlets"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availableoutlet">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_couponusage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons"
+            android:text="Coupon usage limit"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:id="@+id/ed_couponusage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_couponusage"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:padding="13dp"
+            android:textSize="16sp"
+            android:maxLines="3"
+            android:hint="Enter Coupon Value"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_noofitems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_couponusage"
+            android:text="no. of times user can use coupon"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <EditText
+            android:id="@+id/ed_noofitems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_noofitems"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:padding="13dp"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:hint="Enter Coupon Value"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:layout_marginTop="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

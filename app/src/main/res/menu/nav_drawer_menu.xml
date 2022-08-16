@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <item android:title="OUTLETS" android:id="@+id/outlet">
+    <menu>
+        <item
+            android:id="@+id/nav_analytics"
+            android:icon="@drawable/ic_status"
+            android:title="Analytics" />
+
+        <item
+            android:id="@+id/nav_shops"
+            android:icon="@drawable/ic_outlet"
+            android:title="Shops" />
+    </menu>
+    </item>
+
+    <item android:title="PRODUCT" android:id="@+id/product">
+        <menu>
+            <item
+                android:id="@+id/nav_product"
+                android:icon="@drawable/ic_product"
+                android:title="Product" />
+
+            <item
+                android:visible="false"
+                android:id="@+id/nav_pductcat"
+                android:icon="@drawable/ic_category"
+                android:title="Product Categories" />
+            <item
+                android:id="@+id/nav_catid"
+                android:icon="@drawable/ic_toppingcat"
+                android:title="Topping Categories" />
+            <item
+                android:id="@+id/nav_slots"
+                android:title="Slots"
+                android:icon="@drawable/ic_outlet_status"
+                />
+<!--            <item-->
+<!--                android:id="@+id/nav_coupons"-->
+<!--                android:title="Coupons"-->
+<!--                android:icon="@drawable/ic_coupons"-->
+<!--                />-->
+        </menu>
+    </item>
+
+    <item android:title="ORDER AND DELIVERY" android:id="@+id/orderanddelivery">
+        <menu>
+            <item
+                android:id="@+id/nav_orders"
+                android:title="Orders"
+                android:icon="@drawable/ic_orders"
+                />
+            <item
+                android:id="@+id/nav_earnings"
+                android:title="My Earnings"
+                android:icon="@drawable/ic_myearnings"
+                />
+
+<!--            <item-->
+<!--                android:id="@+id/deliverysettings"-->
+<!--                android:title="Delivery Settings"-->
+<!--                android:icon="@drawable/ic_cart"-->
+<!--                />-->
+
+        </menu>
+    </item>
+
+
+    <item android:title="SUPPORT" android:id="@+id/support">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:title="Settings"
+                android:icon="@drawable/ic_setting"
+                />
+
+        </menu>
+    </item>
+
+</menu>

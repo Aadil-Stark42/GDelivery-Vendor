@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GDelivery Vendor</string>
+    <string name="viewall"><u>View All</u></string>
+    <string name="markasread"><u>Mark as read</u></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="acceptandassign">Assign</string>
+    <string name="rate_delivery_boy"><u>Rate Delivery Boy  </u></string>
+</resources>

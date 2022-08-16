@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/consmain"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_left"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Earnings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_availablebalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_top"
+            android:background="@drawable/login_view_bg"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/tv_availablebalhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="available balance"
+                android:textAllCaps="true"
+                android:fontFamily="@font/segoeui"
+                android:textSize="14sp"
+                android:textColor="#7F8AA5"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_availablebal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_availablebalhint"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/gray2"/>
+
+            <View
+                android:id="@+id/viewone"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_availablebal"
+                android:background="#B7CCC9"
+                android:layout_marginTop="10dp"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_inner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewone">
+
+            <TextView
+                android:id="@+id/tv_totalearninghint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="TOTAL EaRNING"
+                android:fontFamily="@font/segoeui"
+                android:textColor="#7F8AA5"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_totalearningvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_totalearninghint"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textColor="@color/gray2"
+                android:textSize="16sp"/>
+            <View
+                android:id="@+id/viewtwo"
+                android:layout_width="0.1dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_totalearninghint"
+                app:layout_constraintEnd_toStartOf="@+id/tv_orderhint"
+                android:background="#B7CCC9"
+                app:layout_constraintTop_toTopOf="@+id/tv_totalearninghint"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_totalearningvalue" />
+
+
+            <TextView
+                android:id="@+id/tv_orderhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Orders"
+                android:fontFamily="@font/segoeui"
+                android:textColor="#7F8AA5"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_totalordervalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_orderhint"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orderhint"
+                android:text=""
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textColor="@color/gray2"
+                android:textSize="16sp"/>
+            <View
+                android:id="@+id/viewthree"
+                android:layout_width="0.1dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_orderhint"
+                app:layout_constraintEnd_toStartOf="@+id/tv_commissionhint"
+                android:background="#B7CCC9"
+                app:layout_constraintTop_toTopOf="@+id/tv_orderhint"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_totalordervalue"
+                android:layout_marginLeft="15dp"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_commissionhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="commission"
+                android:fontFamily="@font/segoeui"
+                android:textColor="#7F8AA5"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:padding="2dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_commissionvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/tv_commissionhint"
+                app:layout_constraintTop_toBottomOf="@+id/tv_commissionhint"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textColor="@color/gray2"
+                android:textSize="16sp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:id="@+id/viewbot"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cons_inner"
+                android:background="#B7CCC9"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_reqwithdraw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Request Withdraw"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_corner_view"
+                app:layout_constraintTop_toBottomOf="@+id/viewbot"
+                android:gravity="center"
+                android:padding="13dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_withdrawhis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_availablebalance"
+            android:text="Withdrawal History"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="16sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="35dp"/>
+        
+
+
+        <TextView
+            android:id="@+id/tv_orderhist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_withdrawhis"
+            app:layout_constraintTop_toBottomOf="@+id/cons_availablebalance"
+            android:text="Order History"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="16sp"
+            android:textColor="#7F8AA5"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="35dp"/>
+
+        <View
+            android:id="@+id/vieworderhistory"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_orderhist"
+            app:layout_constraintEnd_toEndOf="@+id/tv_orderhist"
+            app:layout_constraintTop_toBottomOf="@+id/tv_orderhist"
+            android:background="#B7CCC9"
+            android:layout_marginTop="5dp"/>
+
+        <View
+            android:id="@+id/viewwithdraw"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_withdrawhis"
+            app:layout_constraintEnd_toEndOf="@+id/tv_withdrawhis"
+            app:layout_constraintTop_toBottomOf="@+id/tv_withdrawhis"
+            android:background="@color/app_theme_color"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_historylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewwithdraw"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewwithdraw"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

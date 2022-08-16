@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="20dp">
+
+        <include layout="@layout/common_toolbar" android:id="@+id/head"/>
+
+        <TextView
+            android:id="@+id/tv_addyourfstproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head"
+            android:text="Add your first product"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="#7F8AA5"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_addyourfstproduct"
+            android:text="Add Product Stocks"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_variants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stock"
+            android:text="VARIANT"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/ed_variants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_variants"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:hint="Enter Variant"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_variants"
+            android:text="UNIT"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_variety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unit">
+
+            <Spinner
+                android:id="@+id/spinnerunit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_variety"
+            android:text="Size"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/ed_size"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_size"-->
+<!--            android:background="@drawable/login_view_bg"-->
+<!--            android:padding="15dp"-->
+<!--            android:maxLines="1"-->
+<!--            android:hint="Enter the size"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:textColorHint="#7F8AA5"-->
+<!--            android:textColor="#7F8AA5"-->
+<!--            android:textSize="16sp"-->
+<!--            android:fontFamily="@font/segoeui"/>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_size">
+
+            <Spinner
+                android:id="@+id/spinnersize"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_size"
+            android:text="Actual Price"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/ed_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:inputType="number"
+            android:hint="Enter the actual price"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_sellingprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_price"
+            android:text="SELLING PRICE"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/ed_sellingprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sellingprice"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:hint="Enter the  selling price"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_availablecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_sellingprice"
+            android:text="AVAILABLE COUNT"
+            android:textColor="@color/gray2"
+
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/ed_availablecount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availablecount"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:hint="Enter the available count"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_availablecount"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Do You Want To Add Toppings?"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:textColor="@color/gray2"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45">
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:button="@drawable/checkbox_selector"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                </CheckBox>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/checkbox"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/gray2"
+                    android:fontFamily="@font/segoeui"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:text="Yes"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45">
+                <CheckBox
+                    android:id="@+id/checkboxnonveg"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Veg"
+                    android:textColor="#7F8AA5"
+                    android:fontFamily="@font/segoeui"
+                    android:textSize="16sp"
+                    android:clickable="false"
+                    android:button="@drawable/checkbox_selector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/checkboxnonveg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/gray2"
+                    android:fontFamily="@font/segoeui"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:text="No"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_addtoppings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/con_checkbox"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:backgroundTint="@color/app_theme_color"
+            android:text="Add Product Toppings"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

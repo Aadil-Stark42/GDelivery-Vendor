@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:id="@+id/conmain"
+        android:paddingBottom="15dp">
+
+
+    <LinearLayout
+        android:id="@+id/cons_top"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="?actionBarSize"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+             android:src="@drawable/ic_arrow_left"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:maxLines="1"
+            android:includeFontPadding="false"
+
+            android:singleLine="true"
+            android:text="Order Details"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+           />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_refereal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons_top"
+        android:text="Order Referal"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_referalnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_refereal"
+        android:textColor="@color/gray2"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+    <View
+        android:id="@+id/viewone"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_referalnum"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_orderitems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewone"
+            android:text="Order Items"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:background="@drawable/login_view_bg"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_orderitems" />
+
+
+        <View
+            android:id="@+id/vieww"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_list"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_inst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vieww"
+        android:text="instructions"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_instvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_inst"
+        android:textColor="@color/gray2"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+    <View
+        android:id="@+id/viewtwo"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_instvalue"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_phonehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewtwo"
+        android:text="phone number"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_mobilenumvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phonehint"
+        android:textColor="@color/gray2"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+
+
+        <View
+            android:id="@+id/viewbwlowmobilenum"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobilenumvalue"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_orderdatelabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewbwlowmobilenum"
+            android:text="ordered date"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_orderdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_orderdatelabel"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+
+        <View
+        android:id="@+id/viewthree"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderdate"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_orderamounthint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewthree"
+        android:text="Order amount"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_orderamountvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderamounthint"
+        android:textColor="@color/gray2"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+    <View
+        android:id="@+id/viewfour"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderamountvalue"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_expertdelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewfour"
+        android:text="Expected delivery"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_expertdeliverytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_experttime"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="3dp"
+            android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_experttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expertdelivery"
+        android:textColor="@color/gray2"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+    <View
+        android:id="@+id/viewfive"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expertdeliverytime"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_statushint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewfive"
+        android:text="Status"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_statushint"
+        android:textColor="@color/gray2"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+    <View
+        android:id="@+id/viewsix"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_ordertypehint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewsix"
+        android:text="Order type"
+        android:textColor="#7F8AA5"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/tv_ordertype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ordertypehint"
+        android:textColor="@color/gray2"
+        android:textSize="16sp"
+        android:fontFamily="@font/segoeui"
+        android:layout_marginLeft="15dp"/>
+
+
+    <View
+        android:id="@+id/viewseven"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ordertype"
+        android:background="#B7CCC9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_acceptedathint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewseven"
+            android:text="Accepted at"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_acceptedat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acceptedathint"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+        <View
+            android:id="@+id/viewei"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acceptedat"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_assignedathint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewei"
+            android:text="Assigned at"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_assignedat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_assignedathint"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+        <View
+            android:id="@+id/viewni"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_assignedat"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_picketathint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewni"
+            android:text="Picked at"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_pickedat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_picketathint"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+        <View
+            android:id="@+id/viewten"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pickedat"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_deliveredathint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewten"
+            android:text="Delivered at"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_deliveredat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deliveredathint"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+        <View
+            android:id="@+id/viewele"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deliveredat"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_deliveryboyhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewele"
+            android:text="Delivered boy"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_rate_deliveryboy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_delivery_boy"
+            app:layout_constraintTop_toTopOf="@+id/viewele"
+            app:layout_constraintBottom_toBottomOf="@+id/viewtq"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_deliveryboy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deliveryboyhint"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+        <View
+            android:id="@+id/viewtq"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_deliveryboy"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_addresshint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewtq"
+            android:text="Delivered to"
+            android:textColor="#7F8AA5"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_addresshint"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/segoeui"
+            android:layout_marginLeft="15dp"/>
+
+        <View
+            android:id="@+id/viewtw"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address"
+            android:background="#B7CCC9"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_acceptandassign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/tv_acceptorder"
+            app:layout_constraintTop_toBottomOf="@id/viewtw"
+            android:background="@drawable/assaing_bt_bg"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="13dp"
+            android:visibility="visible"
+            android:paddingBottom="13dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:gravity="center"
+            android:text="@string/acceptandassign"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/segoe_ui_semibold"
+            android:backgroundTint="#4AB543"
+            android:layout_marginTop="25dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_acceptorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewtw"
+            android:background="@drawable/login_view_bg"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="18dp"
+            android:visibility="visible"
+            android:paddingRight="18dp"
+            android:gravity="center"
+            android:text="Accept"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF9800"
+            android:fontFamily="@font/segoe_ui_semibold"
+            android:layout_marginTop="25dp"/>
+
+        <ImageView
+            android:id="@+id/iv_close_order"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/tv_acceptandassign"
+            android:src="@drawable/ic_closeorder"
+            app:layout_constraintTop_toBottomOf="@+id/viewtw"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

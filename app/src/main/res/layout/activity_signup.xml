@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="15dp">
+
+    <include layout="@layout/common_toolbar"
+        android:id="@+id/head"></include>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        android:fontFamily="@font/poppinsmedium"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/gray2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_tellus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tell us few things about you"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            android:textColor="#7F8AA5"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tellus"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="23dp"
+            android:layout_marginLeft="22dp"/>
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            android:background="@drawable/login_view_bg"
+            android:padding="13dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="textCapSentences"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:hint="Enter your full name"/>
+
+
+        <TextView
+            android:id="@+id/tv_emailid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Id"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_name"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="22dp"/>
+
+        <EditText
+            android:id="@+id/ed_emailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emailid"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:hint="Enter your mail id"/>
+
+
+        <TextView
+            android:id="@+id/tv_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_emailid"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="22dp"/>
+
+        <EditText
+            android:id="@+id/ed_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phonenum"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:hint="Enter your phone number"/>
+
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSWORD"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_phonenum"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="22dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password"
+            android:visibility="gone"
+            android:text="hide"
+            android:id="@+id/tv_status_pass"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conspassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/login_view_bg"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_password">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_password"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:hint="Enter Password"
+            android:textColorHint="#7F8AA5"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/segoeui"
+            android:inputType = "textPassword"/>
+
+        <ImageView
+            android:id="@+id/iv_eyepassowrd"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_confirm_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conspassword"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="22dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_confirm_password"
+            android:visibility="gone"
+            android:text="hide"
+            android:id="@+id/tv_status_confirm_pass"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consconfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/login_view_bg"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_confirm_password"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:background="@android:color/transparent"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginLeft="5dp"
+            android:hint="Enter Confirm Password"
+            android:textColor="@color/gray2"
+            android:textColorHint="#7F8AA5"
+            android:fontFamily="@font/segoeui"
+            android:inputType = "textPassword"/>
+
+        <ImageView
+            android:id="@+id/iv_eyeconfirm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consconfirm"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/login_view_bg"
+            android:text="Continue"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:backgroundTint="@color/app_theme_color"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

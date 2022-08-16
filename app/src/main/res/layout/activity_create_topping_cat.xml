@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_left"/>
+
+
+            <TextView
+                android:id="@+id/tv_createhint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Topping Categories"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="15dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_top"
+            android:text="Topping Category"
+            android:layout_marginLeft="22dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/gray2"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="35dp"/>
+
+        <EditText
+            android:id="@+id/ed_catname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textCapSentences"
+            android:hint="Enter Category Name"
+            android:textColorHint="#7F8AA5"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/login_view_bg"
+            android:backgroundTint="@color/app_theme_color"
+            android:text="Create"
+            android:fontFamily="@font/segoe_ui_semibold"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

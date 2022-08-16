@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="20dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_left"/>
+
+
+            <TextView
+                android:id="@+id/tv_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_variants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_top"
+            android:text="VARIANT"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/ed_variants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_variants"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:inputType="number"
+            android:hint="Enter Variant"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_variants"
+            android:text="UNIT"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_variety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unit">
+
+            <Spinner
+                android:id="@+id/spinnerunit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_variety"
+            android:text="Size"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/ed_size"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tv_size"-->
+        <!--            android:background="@drawable/login_view_bg"-->
+        <!--            android:padding="15dp"-->
+        <!--            android:maxLines="1"-->
+        <!--            android:hint="Enter the size"-->
+        <!--            android:layout_marginLeft="15dp"-->
+        <!--            android:layout_marginRight="15dp"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:textColorHint="#7F8AA5"-->
+        <!--            android:textColor="#7F8AA5"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:fontFamily="@font/segoeui"/>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_size">
+
+            <Spinner
+                android:id="@+id/spinnersize"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_size"
+            android:text="Actual Price"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/ed_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:inputType="number"
+            android:hint="Enter the actual price"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_sellingprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_price"
+            android:text="SELLING PRICE"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/ed_sellingprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sellingprice"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:hint="Enter the  selling price"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_availablecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_sellingprice"
+            android:text="AVAILABLE COUNT"
+            android:textColor="@color/gray2"
+
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/ed_availablecount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availablecount"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:hint="Enter the available count"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+
+        <TextView
+            android:id="@+id/tv_addtoppings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_availablecount"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/login_view_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:backgroundTint="@color/app_theme_color"
+            android:text="Update"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

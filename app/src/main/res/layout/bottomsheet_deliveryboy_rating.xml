@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How do you rate our delivery boy?"
+        android:textColor="#0F1D41"
+        android:fontFamily="@font/segoeui"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_header_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your feedback will help us improve delivery experience better."
+        android:textColor="#969EB4"
+        android:fontFamily="@font/segoeui"
+        android:textSize="15sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header">
+    </TextView>
+
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/iv_line"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="#B7CCC9">
+    </View>
+
+
+    <in.vdeliverzvendor.utils.SvgRatingBar
+        app:layout_constraintEnd_toEndOf="@id/iv_line"
+        app:layout_constraintStart_toStartOf="@id/iv_line"
+        app:layout_constraintTop_toBottomOf="@id/iv_line"
+        android:id="@+id/rb_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:numStars="5"
+        android:progressDrawable="@drawable/custom_ratingbar_selector"
+        android:stepSize="1"/>
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/rb_delivery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/editText1"
+        android:inputType="textMultiLine|textCapSentences"
+        android:hint="Leave a comment"
+        android:lines="6"
+        android:minLines="5"
+        android:fontFamily="@font/poppinsmedium"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_margin="25dp"
+        android:gravity="top|start"
+        android:maxLines="6"
+        android:background="@drawable/rating_comment_bg"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"/>
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/editText1"
+        android:layout_marginTop="25dp"
+        android:id="@+id/immediate_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/rating_comment_bg"
+        android:fontFamily="@font/segoe_ui_semibold"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Cancel"
+        android:textColor="#969EB4"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.4"
+        tools:layout_editor_absoluteY="159dp">
+
+    </TextView>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@+id/immediate_no"
+        android:id="@+id/immediate_okay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rating_comment_bg"
+        android:fontFamily="@font/segoe_ui_semibold"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Confirm"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.4"
+        tools:layout_editor_absoluteY="159dp">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

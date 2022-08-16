@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/cons_main"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_left"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.7"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="20dp"
+                android:text="Halcyon Hotel"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsmedium"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_whitemore"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="15dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_edit"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_no_corners"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="15dp"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_edits"
+                android:paddingLeft="18dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingRight="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_edit"/>
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Edit"
+                    android:textColor="@color/gray2"
+                    android:layout_toRightOf="@+id/iv_edit"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_shopimage"
+            android:layout_width="100dp"
+            android:scaleType="centerCrop"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_dummyimg"
+            app:shapeAppearanceOverlay="@style/roundImagView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_top"/>
+
+        <TextView
+            android:id="@+id/tv_outletrefhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_shopimage"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Outlet referel no"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_outletrefnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_outletrefhint"
+            android:layout_marginLeft="15dp"
+            android:text="#58764324"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+
+        <View
+            android:id="@+id/viewone"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_outletrefnum"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_shopnamehint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Outlet Name"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shopnamehint"
+            android:layout_marginLeft="15dp"
+            android:text="Halcyon Hotel"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+
+        <View
+            android:id="@+id/viewtwo"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shopname"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_vendornamehint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewtwo"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Vendor name"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_vendorname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendornamehint"
+            android:layout_marginLeft="15dp"
+            android:text="Halcyon Hotel"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_mobilenumhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendorname"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Mobile number"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_mobilenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobilenumhint"
+            android:layout_marginLeft="15dp"
+            android:text="9085626488"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+
+        <View
+            android:id="@+id/viewthree"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobilenum"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_statushint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewei"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="status"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_statushint"
+            android:layout_marginLeft="15dp"
+            android:text="Opened"
+            android:visibility="gone"
+            android:fontFamily="@font/segoeui"
+            android:textColor="#4AB543"
+            android:textSize="16sp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45">
+                <CheckBox
+                    android:id="@+id/checkboxactive"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:clickable="false"
+                    android:button="@drawable/checkbox_selector"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                </CheckBox>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/checkboxactive"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/gray2"
+                    android:fontFamily="@font/segoeui"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:text="Opened"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45">
+                <CheckBox
+                    android:id="@+id/checkboxclosed"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Veg"
+                    android:textColor="#7F8AA5"
+                    android:fontFamily="@font/segoeui"
+                    android:textSize="16sp"
+                    android:clickable="false"
+                    android:button="@drawable/checkbox_selector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                </CheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/checkboxclosed"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="@color/gray2"
+                    android:fontFamily="@font/segoeui"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:text="Closed"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <View
+            android:id="@+id/viewfour"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/con_checkbox"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_outletaddresshint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewfour"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Outlet Address"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_outletaddresshint"
+            android:layout_marginLeft="15dp"
+            android:text="Road No 3801, Kamarajar Salai, Madurai"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/viewfive"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_availabledayshint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewfive"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Outlet Available days"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_availabledays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availabledayshint"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:text="Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/viewsix"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_availabledays"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_outlettimingshint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewsix"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Outlet Timings"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_outlettimings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_outlettimingshint"
+            android:layout_marginLeft="15dp"
+            android:text="12:01 am - 11:59 pm"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/viewseven"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_outlettimings"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_vendoremailhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewthree"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Vendor Email"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_vendoremail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendoremailhint"
+            android:layout_marginLeft="15dp"
+            android:text="gallery21@gmail.com"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/viewei"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendoremail"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_mobnumhint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewei"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Phone Number"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tv_mobnums"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobnumhint"
+            android:layout_marginLeft="15dp"
+            android:text="70569842644"
+            android:fontFamily="@font/segoeui"
+            android:textColor="@color/gray2"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/viewn"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobnums"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#B7CCC9"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_outletproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewseven"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Outlet Products"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="#7F8AA5"
+            android:textAllCaps="true"/>
+
+
+        <TextView
+            android:id="@+id/tv_viewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/viewseven"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/viewall"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray2"
+            android:textSize="14sp"/>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_productlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_outletproduct"/>
+        
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/round_corner_view"
+            app:layout_constraintTop_toBottomOf="@+id/rv_productlist"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/segoe_ui_semibold"
+            android:textColor="@color/gray2"/>
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_download"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_download"
+                android:layout_marginRight="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

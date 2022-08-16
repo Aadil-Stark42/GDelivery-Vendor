@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="20dp">
+
+        <include layout="@layout/common_toolbar" android:id="@+id/head"/>
+
+        <TextView
+            android:id="@+id/tv_addyourfstproduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head"
+            android:text="Add your first product"
+            android:fontFamily="@font/segoeui"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="#7F8AA5"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_addproductdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_addyourfstproduct"
+            android:text="Add Product Details"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_productimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_addproductdetails"
+            android:text="Product Image"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textColor="@color/gray2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_img"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_productimage"
+            android:background="@drawable/login_view_bg"
+            android:layout_margin="15dp">
+            
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_cam"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_cam"
+                app:shapeAppearanceOverlay="@style/roundImagView"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_shopcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_img"
+            android:text="SHOP CATEGORY"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cons_img"
+            app:layout_constraintStart_toEndOf="@+id/tv_shopcat"
+            android:text="*"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_shocat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shopcat">
+
+            <Spinner
+                android:id="@+id/shopcatsp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tv_shops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_shocat"
+            android:text="SHOP"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cons_shocat"
+            app:layout_constraintStart_toEndOf="@+id/tv_shops"
+            android:text="*"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_shops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_shops">
+
+            <Spinner
+                android:id="@+id/shopsp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/tv_produtname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_shops"
+            android:text="Product Name"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cons_shops"
+            app:layout_constraintStart_toEndOf="@+id/tv_produtname"
+            android:text="*"
+            android:layout_marginTop="19dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+
+        <EditText
+            android:id="@+id/ed_producname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_produtname"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:maxLines="1"
+            android:inputType="textCapSentences"
+            android:hint="Enter Product name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_productcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_producname"
+            android:text="PRODUCT CATEGORY"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ed_producname"
+            app:layout_constraintStart_toEndOf="@+id/tv_productcat"
+            android:text="*"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_productcat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_productcat">
+
+            <Spinner
+                android:id="@+id/spinneproductcat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_variety"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_productcat"
+            android:text="Variety"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cons_productcat"
+            app:layout_constraintStart_toEndOf="@+id/tv_variety"
+            android:text="*"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_variety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_variety">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_cuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_variety"
+            android:text="PRODUCT CUISINE"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/gray2"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cons_variety"
+            app:layout_constraintStart_toEndOf="@+id/tv_cuisine"
+            android:text="*"
+            android:visibility="gone"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_cuisine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:background="@drawable/login_view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cuisine">
+
+            <Spinner
+                android:id="@+id/spinnercus"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="5dp"
+                style="@style/mySpinnerItemStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.498" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_cuisine"
+            android:text="DESCRIPTION"
+            android:textColor="@color/gray2"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/cons_cuisine"
+            app:layout_constraintStart_toEndOf="@+id/tv_desc"
+            android:text="*"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FF5B5B"></TextView>
+
+        <EditText
+            android:id="@+id/ed_desc"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+            android:background="@drawable/login_view_bg"
+            android:padding="15dp"
+            android:gravity="start"
+            android:inputType="textCapSentences"
+            android:hint="Enter few words about the product."
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#7F8AA5"
+            android:textColor="#7F8AA5"
+            android:textSize="16sp"
+            android:fontFamily="@font/segoeui"/>
+
+        <TextView
+            android:id="@+id/tv_productstocks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_desc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/login_view_bg"
+            android:backgroundTint="@color/app_theme_color"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="Add Product Stocks"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:padding="13dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

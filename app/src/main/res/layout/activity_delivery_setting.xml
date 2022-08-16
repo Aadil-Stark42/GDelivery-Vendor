@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="25dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_arrow_left"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Delivery options"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_deliveryradius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons_top"
+        android:text="delivery radius"
+        android:textAllCaps="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13sp"
+        android:textColor="@color/gray2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#FF5B5B"
+        app:layout_constraintTop_toBottomOf="@+id/cons_top"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_deliveryradius"/>
+
+    <EditText
+        android:id="@+id/ed_deliveryoption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_deliveryradius"
+        android:background="@drawable/login_view_bg"
+        android:padding="15dp"
+        android:maxLines="1"
+        android:layout_margin="15dp"
+        android:textColor="@color/gray2"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_deliverymethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_deliveryoption"
+        android:text="Delivery method"
+        android:textAllCaps="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13sp"
+        android:textColor="@color/gray2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#FF5B5B"
+        app:layout_constraintTop_toBottomOf="@+id/ed_deliveryoption"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_deliverymethod"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_deliverymethod">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45">
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="15dp"
+                android:button="@drawable/checkbox_selector"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </CheckBox>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/checkbox"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#7F8AA5"
+                android:fontFamily="@font/segoeui"
+                android:layout_marginLeft="15dp"
+                android:textSize="16sp"
+                android:text="Delivery Partner"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45">
+            <CheckBox
+                android:id="@+id/checkboxnonveg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="15dp"
+                android:text="Veg"
+                android:textColor="#7F8AA5"
+                android:fontFamily="@font/segoeui"
+                android:textSize="16sp"
+                android:button="@drawable/checkbox_selector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+            </CheckBox>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/checkboxnonveg"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#7F8AA5"
+                android:fontFamily="@font/segoeui"
+                android:layout_marginLeft="15dp"
+                android:textSize="16sp"
+                android:text="Self Delivery"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_minimumorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_checkbox"
+        android:text="mini amount for delivery"
+        android:textAllCaps="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13sp"
+        android:textColor="@color/gray2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#FF5B5B"
+        app:layout_constraintTop_toBottomOf="@+id/con_checkbox"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_minimumorder"/>
+
+    <EditText
+        android:id="@+id/ed_minimumorderamount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_minimumorder"
+        android:background="@drawable/login_view_bg"
+        android:padding="15dp"
+        android:maxLines="1"
+        android:layout_margin="15dp"
+        android:textColor="@color/gray2"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_deliverycharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_minimumorderamount"
+        android:text="delivery charges"
+        android:textAllCaps="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="13sp"
+        android:textColor="@color/gray2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="#FF5B5B"
+        app:layout_constraintTop_toBottomOf="@+id/ed_minimumorderamount"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_deliverycharges"/>
+
+    <EditText
+        android:id="@+id/ed_deliverycarges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_deliverycharges"
+        android:background="@drawable/login_view_bg"
+        android:padding="15dp"
+        android:maxLines="1"
+        android:layout_margin="15dp"
+        android:textColor="@color/gray2"
+        android:fontFamily="@font/segoeui"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_deliverycarges"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/login_view_bg"
+        android:padding="15dp"
+        android:backgroundTint="@color/app_theme_color"
+        android:text="Save Changes"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/segoe_ui_semibold"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
