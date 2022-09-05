@@ -405,7 +405,7 @@
       android:layout_height="wrap_content"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/ed_email"
-      android:text="PackZo Commission"
+      android:text="Gdeliver Commission"
       android:textAllCaps="true"
       android:textColor="@color/gray2"
       android:fontFamily="@font/poppins_regular"

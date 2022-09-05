@@ -11,37 +11,32 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
+import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 
 import androidx.core.app.NotificationCompat;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import in.vdeliverzvendor.MainActivity;
 import in.vdeliverzvendor.R;
 import in.vdeliverzvendor.dashboard.DashboardActivity;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
+import static android.content.Context.VIBRATOR_SERVICE;
 
 public class NotificationUtils {
 
     private static String TAG = NotificationUtils.class.getSimpleName();
-
     private Context mContext;
-    public static final int NOTIFICATION_ID = 100;
-    public static final int NOTIFICATION_ID_BIG_IMAGE = 101;
     MediaPlayer mediaPlayer;
 
     public NotificationUtils(Context mContext) {
@@ -50,10 +45,6 @@ public class NotificationUtils {
 
 
     public void showNotificationMessage(final String title, final String message, final String imageUrl, Intent intent, boolean isSound) {
-
-
-        Log.d(TAG, "showNotificationMessage: class ");
-        // Check for empty push messag
         if (TextUtils.isEmpty(message))
             return;
 
@@ -71,21 +62,10 @@ public class NotificationUtils {
                         PendingIntent.FLAG_CANCEL_CURRENT
                 );
 
-
-        Log.e(TAG, "showNotificationMessage: notification");
-
         Notification.Builder notification = new Notification.Builder(mContext);
-        //   showSmallNotification(notification, icon, title, message,imageUrl , resultPendingIntent);
-
-     /*   final Uri alarmSound = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
-                + "://" + mContext.getPackageName() + "/raw/notification");*/
-
         if (!TextUtils.isEmpty(imageUrl)) {
-
             if (imageUrl != null && imageUrl.length() > 4 && Patterns.WEB_URL.matcher(imageUrl).matches()) {
-
                 Bitmap bitmap = getBitmapFromURL(imageUrl);
-
                 if (bitmap != null) {
                     showBigNotification(bitmap, notification, icon, title, message, imageUrl, resultPendingIntent);
                 } else {
@@ -95,7 +75,6 @@ public class NotificationUtils {
         } else {
             showSmallNotification(notification, icon, title, message, imageUrl, resultPendingIntent);
             if (isSound) {
-                //playNotificationSound();
                 play_ringtone();
             }
         }
@@ -103,76 +82,59 @@ public class NotificationUtils {
 
 
     private void showSmallNotification(Notification.Builder mBuilder, int icon, String title, String message, String timeStamp, PendingIntent resultPendingIntent) {
-
-        Log.e(TAG, "showSmallNotification: small notification ");
-        Log.d(TAG, "showSmallNotification: titile " + title);
-        Log.d(TAG, "showSmallNotification: message " + message);
-        Log.d(TAG, "showSmallNotification: resultPendingIntent " + resultPendingIntent);
-
-        Intent intent = new Intent(mContext, DashboardActivity.class);
+         Intent intent = new Intent(mContext, DashboardActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         String channelId = "Default";
-
         play_ringtone();
-        Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-        // Vibrate for 500 milliseconds
-        v.vibrate(5000);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext, channelId)
                 .setSmallIcon(icon)
                 .setContentTitle(title)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
-                .setContentText(message).setAutoCancel(true).setContentIntent(pendingIntent);
+                 .setContentText(message).setAutoCancel(true).setContentIntent(pendingIntent);
 
-        builder.setVibrate(new long[]{1000, 1000, 1000, 1000, 1000});
+        builder.setVibrate(new long[]{500, 500});
+        builder.setSound(Settings.System.DEFAULT_NOTIFICATION_URI);
         NotificationManager manager = (NotificationManager) mContext.getSystemService(NOTIFICATION_SERVICE);
-   /*     Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        builder.setSound(alarmSound);*/
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(channelId, "Default channel",
                     NotificationManager.IMPORTANCE_HIGH);
+            channel.enableVibration(true);
+            channel.setVibrationPattern(new long[]{500, 500});
             manager.createNotificationChannel(channel);
         }
         manager.notify(0, builder.build());
     }
 
     private void showBigNotification(Bitmap bitmap, Notification.Builder mBuilder, int icon, String title, String message, String imageurl, PendingIntent resultPendingIntent) {
-
-
-        Log.d(TAG, "showBigNotification: big images");
-
-        NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
+         NotificationCompat.BigPictureStyle bpStyle = new NotificationCompat.BigPictureStyle();
         bpStyle.bigPicture(bitmap);
 
         Intent intent = new Intent(mContext, DashboardActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         String channelId = "Default";
-
         play_ringtone();
-        Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-        // Vibrate for 500 milliseconds
-        v.vibrate(5000);
-
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext, channelId);
-
         builder.setContentIntent(pendingIntent)
                 .setAutoCancel(true)
                 .setContentTitle(title)
                 .setContentText(message)
                 .setSmallIcon(icon)
-                .setWhen(System.currentTimeMillis())
+                 .setWhen(System.currentTimeMillis())
                 .setStyle(bpStyle);
-
-     /*   Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        builder.setSound(alarmSound);*/
-
+        builder.setVibrate(new long[]{500, 500});
+        builder.setSound(Settings.System.DEFAULT_NOTIFICATION_URI);
         NotificationManager manager = (NotificationManager) mContext.getSystemService(NOTIFICATION_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(channelId, "Default channel",
                     NotificationManager.IMPORTANCE_HIGH);
+            channel.enableVibration(true);
+            channel.setVibrationPattern(new long[] { 500, 500 });
+
             manager.createNotificationChannel(channel);
         }
         manager.notify(0, builder.build());
@@ -183,9 +145,11 @@ public class NotificationUtils {
      * Downloading push notification image before displaying it in
      * the notification tray
      */
+
+
     public Bitmap getBitmapFromURL(String strURL) {
         try {
-            if(!strURL.equals("sample.png")){
+            if (!strURL.equals("sample.png")) {
                 URL url = new URL(strURL);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setDoInput(true);
@@ -193,8 +157,8 @@ public class NotificationUtils {
                 InputStream input = connection.getInputStream();
                 Bitmap myBitmap = BitmapFactory.decodeStream(input);
                 return myBitmap;
-            }else {
-                return  null;
+            } else {
+                return null;
             }
 
         } catch (Exception e) {
@@ -203,28 +167,29 @@ public class NotificationUtils {
         }
     }
 
-    // Playing notification sound
-    public void playNotificationSound() {
- /*       try {
-//            Uri alarmSound = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
-//                    + "://" + mContext.getPackageName() + "/raw/notification");
-//            Ringtone r = RingtoneManager.getRingtone(mContext, alarmSound);
-//            r.play();
-            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-            Ringtone r = RingtoneManager.getRingtone(mContext.getApplicationContext(), notification);
-            r.play();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
-    }
-
 
     public void play_ringtone() {
-        try {
+        Vibrator vibrator;
+        vibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+        Log.e("vibratorvibrator", "vibratorvibrator ");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(1500, VibrationEffect.DEFAULT_AMPLITUDE));
+        } else {
+            //deprecated in API 26
+            vibrator.vibrate(1500);
+        }
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+        }
+        mediaPlayer = MediaPlayer.create(mContext.getApplicationContext(), R.raw.notification_sound);
+        mediaPlayer.start();
+
+
+        /*  try {
             if (mediaPlayer != null) {
                 mediaPlayer.stop();
             }
-            mediaPlayer = MediaPlayer.create(mContext.getApplicationContext(), R.raw.noti_beep);
+            mediaPlayer = MediaPlayer.create(mContext.getApplicationContext(), R.raw.preview);
             mediaPlayer.start();
             mediaPlayer.setLooping(true);
 
@@ -238,7 +203,7 @@ public class NotificationUtils {
             }, 7000);
         } catch (Exception e) {
             Log.d(TAG, "play_ringtone: errororr " + e.getMessage());
-        }
+        }*/
     }
 
     /**

@@ -23,18 +23,13 @@ import in.vdeliverzvendor.utils.MnxPreferenceManager;
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public static Handler handler = new Handler();
     String TAG = MyFirebaseMessagingService.class.getSimpleName();
-    String title = "", message = "", imageUrl = "", timestamp = "", type;
-    public static final String REGISTRATION_COMPLETE = "registrationComplete";
-    public static final String PUSH_NOTIFICATION = "pushNotification";
+    String title = "", message = "", imageUrl = "",  type;
+     public static final String PUSH_NOTIFICATION = "pushNotification";
     private NotificationUtils notificationUtils;
-    boolean isBackground = false;
 
     @Override
     public void onNewToken(@NonNull String s) {
         super.onNewToken(s);
-
-        Log.d(TAG, "onNewToken: " + s);
-
         MnxPreferenceManager.setString(MnxConstant.FCM_TOKEN, s);
 
     }
@@ -42,9 +37,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Log.d(TAG, "onMessageReceived: " + remoteMessage);
-        Log.i("TESTPUSHMESSAGEVEN", "TESTPUSHMESSAGEVEN" + MnxPreferenceManager.getBoolean(MnxConstant.NOTIFICATION_MODE, false));
-
         if ((MnxPreferenceManager.getBoolean(MnxConstant.NOTIFICATION_MODE, true))) {
             String dataString = remoteMessage.getData().get("data");
 
@@ -66,8 +58,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
     private void showNotificationMessage(Context context, String title, String message, String imageUrl, Intent resultIntent, boolean isSound) {
-
-        Log.d(TAG, "showNotificationMessage: ");
         notificationUtils = new NotificationUtils(context);
         resultIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         notificationUtils.showNotificationMessage(title, message, imageUrl, resultIntent, isSound);
@@ -76,9 +66,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 
     private void handleDataMessage(JSONObject json) {
-
-
-        Log.e(TAG, "push json: " + json.toString());
         try {
             title = json.getString("title");
             message = json.getString("message");
@@ -94,8 +81,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             pushNotification.putExtra("message", message);
             LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
             // play notification sound
-            NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
-            notificationUtils.playNotificationSound();
             showNotificationMessage(getApplicationContext(), title, message, imageUrl, pushNotification, false);
 
         } else {
@@ -103,9 +88,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Intent resultIntent = new Intent(getApplicationContext(), DashboardActivity.class);
             resultIntent.putExtra("isevent", 1);
             resultIntent.putExtra("message", message);
-            NotificationUtils notificationUtils = new NotificationUtils(getApplicationContext());
-            notificationUtils.playNotificationSound();
-            showNotificationMessage(getApplicationContext(), title, message, imageUrl, resultIntent, true);
+             showNotificationMessage(getApplicationContext(), title, message, imageUrl, resultIntent, true);
         }
     }
 }

@@ -20,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class VDeliverzApiVendor {
     private static Retrofit retrofit = null;
-    public static final String BASE_URL = "http://dev.gdigitaldelivery.com/api/vendor/";
+    public static final String BASE_URL = "http://production.gdigitaldelivery.com/api/vendor/";
     //public static final String BASE_URL = "http://suvai.deliverymnx.net/api/vendor/";
     static String TAG = VDeliverzApiVendor.class.getSimpleName();
 

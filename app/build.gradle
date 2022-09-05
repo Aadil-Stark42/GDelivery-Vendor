@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 33
+
 
     defaultConfig {
         applicationId "com.gdeliveryvendor"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 5
-        versionName "1.4"
+        targetSdkVersion 33
+        versionCode 3
+        versionName "1.0.2"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

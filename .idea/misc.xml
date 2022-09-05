@@ -284,6 +284,25 @@
         <entry key="..\:/MindNotix/MindNotixProject/Insuvai_vendor/app/src/main/res/layout/toppinglistitems.xml" value="0.12771739130434784" />
         <entry key="..\:/MindNotix/MindNotixProject/Insuvai_vendor/app/src/main/res/layout/weekstatus.xml" value="0.12771739130434784" />
         <entry key="..\:/MindNotix/MindNotixProject/Insuvai_vendor/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2046875" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/drawable/ic_notification.xml" value="0.1435" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/acivity_status.xml" value="0.1359375" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_accountcreate_success.xml" value="0.5" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_add_bankdetails.xml" value="0.25" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_add_toppingscat.xml" value="0.1359375" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_addnewproduct.xml" value="0.25" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_addvariants.xml" value="0.33" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_bank_list.xml" value="0.1359375" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_bank_listitem.xml" value="0.1359375" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_bar_graph_display.xml" value="0.1359375" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_coupon_overview.xml" value="0.25" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_create_coupon.xml" value="0.25" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_create_outlet.xml" value="0.1" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_createcategoryforproduct.xml" value="0.10914855072463768" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_outlet_edit.xml" value="0.12" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_signup.xml" value="0.33" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_slot_creation.xml" value="0.15715579710144928" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/activity_slot_update.xml" value="0.1359375" />
+        <entry key="..\:/MindNotix/MindNotixProject/github/android/GDelivery-Vendor/app/src/main/res/layout/dashboard_rowitems.xml" value="0.25" />
       </map>
     </option>
   </component>

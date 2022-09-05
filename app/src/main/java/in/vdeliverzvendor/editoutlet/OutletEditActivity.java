@@ -278,10 +278,9 @@ public class OutletEditActivity extends BaseActivity implements ShopDetailContra
             case  R.id.tv_sund:
                 if (issun) {
                     tv_sunday.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    issun=false;
                     tv_sunday.setTextColor(getResources().getColor(R.color.gray2));
-                }
-                else{
+                    issun=false;
+                } else{
                     tv_sunday.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
                     tv_sunday.setTextColor(getResources().getColor(R.color.white));
                     issun=true;

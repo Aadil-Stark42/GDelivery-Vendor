@@ -11,6 +11,7 @@
     <domain includeSubdomains="true">adminpanel.vdeliverz.in</domain>
     <domain includeSubdomains="true">suvai.deliverymnx.net</domain>
     <domain includeSubdomains="true">dev.gdigitaldelivery.com</domain>
+    <domain includeSubdomains="true">production.gdigitaldelivery.com</domain>
 </domain-config>
 <base-config cleartextTrafficPermitted="false"/>
 </network-security-config>

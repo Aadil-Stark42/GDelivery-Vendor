@@ -177,88 +177,94 @@ public class OutletActivity extends BaseActivity implements GetCuisineContract ,
     @Override
     public void onClick(View v) {
         try{
-        switch (v.getId()){
-            case  R.id.tv_sund:
-                if (issun) {
-                    tv_sunday.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    issun=false;
-                }
-                else{
-                    tv_sunday.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_sunday.setTextColor(Color.parseColor("#ffffff"));
-                    issun=true;
-                }
-                break;
-            case  R.id.tv_mon:
-                if (ismonday) {
-                    tv_mon.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    ismonday=false;
-                }
-                else{
-                    tv_mon.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_mon.setTextColor(Color.parseColor("#ffffff"));
-                    ismonday=true;
-                }
-                break;
-            case  R.id.tv_tue:
-                if (istue) {
-                    tv_tue.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    istue=false;
-                }
-                else{
-                    tv_tue.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_tue.setTextColor(Color.parseColor("#ffffff"));
-                    istue=true;
-                }
-                break;
-            case  R.id.tv_wed:
-                if (iswed) {
-                    tv_wed.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    iswed=false;
-                }
-                else{
-                    tv_wed.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_wed.setTextColor(Color.parseColor("#ffffff"));
-                    iswed=true;
-                }
-                break;
-            case  R.id.tv_friday:
-                if (isfriday) {
-                    tv_friday.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    isfriday=false;
-                }
-                else{
-                    tv_friday.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_friday.setTextColor(Color.parseColor("#ffffff"));
-                    isfriday=true;
-                }
-                break;
-            case  R.id.tv_th:
-                if (isthr) {
-                    tv_th.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    isthr=false;
-                }
-                else{
-                    tv_th.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_th.setTextColor(Color.parseColor("#ffffff"));
-                    isthr=true;
-                }
-                break;
-            case  R.id.tv_sat:
-                if (issat) {
-                    tv_sat.setBackground(getResources().getDrawable(R.drawable.circle_bg));
-                    issat=false;
-                }
-                else{
-                    tv_sat.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
-                    tv_sat.setTextColor(Color.parseColor("#ffffff"));
-                    issat=true;
-                }
-                break;
-        }
+            switch (v.getId()){
+                case  R.id.tv_sund:
+                    if (issun) {
+                        tv_sunday.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_sunday.setTextColor(getResources().getColor(R.color.gray2));
+                        issun=false;
+                    } else{
+                        tv_sunday.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_sunday.setTextColor(getResources().getColor(R.color.white));
+                        issun=true;
+                    }
+                    break;
+                case  R.id.tv_mon:
+                    if (ismonday) {
+                        tv_mon.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_mon.setTextColor(getResources().getColor(R.color.gray2));
+                        ismonday=false;
+                    }
+                    else{
+                        tv_mon.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_mon.setTextColor(getResources().getColor(R.color.white));
+                        ismonday=true;
+                    }
+                    break;
+                case  R.id.tv_tue:
+                    if (istue) {
+                        tv_tue.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_tue.setTextColor(getResources().getColor(R.color.gray2));
+                        istue=false;
+                    }
+                    else{
+                        tv_tue.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_tue.setTextColor(getResources().getColor(R.color.white));
+                        istue=true;
+                    }
+                    break;
+                case  R.id.tv_wed:
+                    if (iswed) {
+                        tv_wed.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_wed.setTextColor(getResources().getColor(R.color.gray2));
+                        iswed=false;
+                    }
+                    else{
+                        tv_wed.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_wed.setTextColor(getResources().getColor(R.color.white));
+                        iswed=true;
+                    }
+                    break;
+                case  R.id.tv_friday:
+                    if (isfriday) {
+                        tv_friday.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_friday.setTextColor(getResources().getColor(R.color.gray2));
+                        isfriday=false;
+                    }
+                    else{
+                        tv_friday.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_friday.setTextColor(getResources().getColor(R.color.white));
+                        isfriday=true;
+                    }
+                    break;
+                case  R.id.tv_th:
+                    if (isthr) {
+                        tv_th.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_th.setTextColor(getResources().getColor(R.color.gray2));
+                        isthr=false;
+                    }
+                    else{
+                        tv_th.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_th.setTextColor(getResources().getColor(R.color.white));
+                        isthr=true;
+                    }
+                    break;
+                case  R.id.tv_sat:
+                    if (issat) {
+                        tv_sat.setBackground(getResources().getDrawable(R.drawable.circle_bg));
+                        tv_sat.setTextColor(getResources().getColor(R.color.gray2));
+                        issat=false;
+                    }
+                    else{
+                        tv_sat.setBackground(getResources().getDrawable(R.drawable.orange_crc_bg));
+                        tv_sat.setTextColor(getResources().getColor(R.color.white));
+                        issat=true;
+                    }
+                    break;
+            }
         }catch (Exception e){
-            FirebaseCrashlytics.getInstance().log(TAG+ " " + Objects.requireNonNull(e.getMessage()));
-            Log.d(TAG, "saeierjeb fe v df: errorr rr + "+e.getMessage());
+            FirebaseCrashlytics.getInstance().log(TAG+ " " +Objects.requireNonNull(e.getMessage()));
+            Log.d(TAG, "tryr jabjbj fjf: errorr rr + "+e.getMessage());
         }
     }
 
